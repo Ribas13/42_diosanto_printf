@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:36:34 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 15:30:05 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:39:20 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static void	ft_printf_checker(char s, va_list *arg, int len, int *i)
 	else if (s == 'u')
 		ft_unsigned_int_len(va_arg (*arg, unsigned int), len);
 	else if (s == 'x')
-		ft_hexa_len(va_arg (*arg, unsigned int), len);
+		ft_hexa_len(va_arg (*arg, unsigned int), len, 'x');
 	else if (s == 'X')
-		ft_hexa_len(va_arg (*arg, unsigned int), len);
+		ft_hexa_len(va_arg (*arg, unsigned int), len, 'X');
 	else if (s == '%')
 		ft_putcharacter_len('%', len);
 	else
@@ -63,7 +63,7 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str;
 	int		i;
@@ -72,4 +72,4 @@ int	main(void)
 	i = 65;
 	printf("original:\n%s\n%i", str, i);
 	ft_printf("original:\n%s\n%i", str, i);
-}
+}*/
