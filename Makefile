@@ -8,25 +8,17 @@ SRCS	= ft_printf.c			\
 		ft_unsigned_int_len.c	\
 		ft_pointer.c
 
-OBJS	= $(SRCS:.c=.o)
+OBJS = $(SRC:.c=.o)
 
-CC	= gcc
+$(NAME) : $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-RM	= rm -f
-
-CFLAGS	= -Wall -Wextra -Werror
-
-all:	$(NAME)
-
-$(NAME):	$(OBJS)
-			ar rcs $(NAME) $(OBJS)
+all: $(NAME)
 
 clean:
-			$(RM) $(OBJS)
+	/bin/rm -rf $(OBJS)
 
-fclean:		clean
-			$(RM) $(NAME)
+fclean: clean
+	/bin/rm -f $(NAME)
 
-re:			fclean all
-
-.PHONY:		all clean fclean re
+re: fclean all

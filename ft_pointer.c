@@ -6,18 +6,18 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 17:03:35 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 17:27:42 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:36:50 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <unistd.h>
 
-void	ft_putcharacter_len(char c, int *len)
+/*void	ft_putcharacter_len(char c, int *len)
 {
 	write(1, &c, 1);
 	(*len)++;
-}
+}*/
 
 void	ft_pointer(size_t p, int *len)
 {

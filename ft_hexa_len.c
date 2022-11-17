@@ -6,18 +6,18 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:23:31 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 17:21:51 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:36:46 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <unistd.h>
 
-void	ft_putcharacter_len(char c, int *len)
+/*void	ft_putcharacter_len(char c, int *len)
 {
 	write(1, &c, 1);
 	(*len)++;
-}
+}*/
 
 void	ft_hexa_len(unsigned int x, int *len, char x_or_x)
 {
