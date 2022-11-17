@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:36:11 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 15:40:35 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:14:29 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_string(char *args, int *len)
 	}
 	while (args[i])
 	{
-		ft_putcharacter_len(args[i], len)
+		ft_putcharacter_len(args[i], len);
 		i++;
 	}
 }

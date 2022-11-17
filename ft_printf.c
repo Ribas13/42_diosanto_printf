@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:36:34 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 16:39:20 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:27:16 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "ft_printf.h"
 
-static void	ft_printf_checker(char s, va_list *arg, int len, int *i)
+static void	ft_printf_checker(char s, va_list *arg, int *len, int *i)
 {
 	if (s == 'c')
 		ft_putcharacter_len(va_arg (*arg, int), len);
@@ -38,9 +38,9 @@ static void	ft_printf_checker(char s, va_list *arg, int len, int *i)
 
 int	ft_printf(const char *format, ...)
 {
-	unsigned int	i;
-	unsigned int	len;
-	va_list			arg;
+	int		i;
+	int		len;
+	va_list	arg;
 
 	i = 0;
 	len = 0;
@@ -55,7 +55,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			ft_putchar_l((char)format[i], &len);
+			ft_putcharacter_len((char)format[i], &len);
 			i++;
 		}
 	}
@@ -67,9 +67,22 @@ int	ft_printf(const char *format, ...)
 {
 	char	*str;
 	int		i;
+	int		value;
 
+	value = 2567;
 	str = "Hello";
 	i = 65;
 	printf("original:\n%s\n%i", str, i);
-	ft_printf("original:\n%s\n%i", str, i);
+	ft_printf("mine:\n%s\n%i", str, i);
+	printf("Original:\n");
+	printf("Decimal value is: %d\n", value);
+	printf("Octal value is: %o\n", value);
+	printf("Hexadecimal value is (Alphabet in small letters): %x\n", value);
+	printf("Hexadecimal value is (Alphabet in capital letters): %X\n", value);
+	printf("Mine:\n");
+	ft_printf("Decimal value is: %d\n", value);
+	ft_printf("Octal value is: %o\n", value);
+	ft_printf("Hexadecimal value is (Alphabet in small letters): %x\n", value);
+	ft_printf("Hexadecimal value is (Alphabet in capital letters): %X\n", value);
+	return (0);
 }*/
