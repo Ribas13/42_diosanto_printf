@@ -6,19 +6,23 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:58:47 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 15:36:44 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/18 15:09:38 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
-// Standard C Libraries
-
-# include <unistd.h>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+//# include "Libft/libft.h"
 # include <stdarg.h>
-# include <stddef.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+typedef struct s_data
+{
+	int	count;
+}		t_data;
 
 // Protoypes
 

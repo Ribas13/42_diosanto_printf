@@ -1,4 +1,16 @@
-NAME	= libftprintf.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/11/18 14:52:28 by diosanto          #+#    #+#              #
+#    Updated: 2022/11/18 15:11:13 by diosanto         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libftprintf.a
 
 SRCS	= ft_printf.c			\
 	   	ft_hexa_len.c 			\
@@ -8,17 +20,25 @@ SRCS	= ft_printf.c			\
 		ft_unsigned_int_len.c	\
 		ft_pointer.c
 
-OBJS = $(SRC:.c=.o)
+OBJS	= $(SRCS:.c=.o)
 
-$(NAME) : $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+CC	= gcc
 
-all: $(NAME)
+RM	= rm -f
+
+CFLAGS	= -Wall -Wextra -Werror
+
+all:	$(NAME)
+
+$(NAME):	$(OBJS)
+			ar rcs $(NAME) $(OBJS)
 
 clean:
-	/bin/rm -rf $(OBJS)
+			$(RM) $(OBJS)
 
-fclean: clean
-	/bin/rm -f $(NAME)
+fclean:		clean
+			$(RM) $(NAME)
 
-re: fclean all
+re:			fclean all
+
+.PHONY:		all clean fclean re
