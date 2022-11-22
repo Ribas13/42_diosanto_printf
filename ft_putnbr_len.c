@@ -6,28 +6,21 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:17 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 17:37:03 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:17:12 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <unistd.h>
 
-/*void	ft_putcharacter_len(char c, int *len)
-{
-	write(1, &c, 1);
-	(*len)++;
-}*/
-
 void	ft_putnbr_len(int n, int *len)
 {
 	int	nbr;
 
 	nbr = n;
-	if (nbr == 2147483647)
+	if (nbr == -2147483648)
 	{
-		write(1, "2147483647", 11);
-		(*len) += 11;
+		ft_string("-2147483648", len);
 		return ;
 	}
 	if (nbr < 0)

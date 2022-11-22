@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:23:31 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/17 17:36:46 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:11:55 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 	(*len)++;
 }*/
 
-void	ft_hexa_len(unsigned int x, int *len, char x_or_x)
+void	ft_hexa_len(unsigned long int x, int *len, char x_or_x)
 {
 	char	str[25];
 	char	*base;
